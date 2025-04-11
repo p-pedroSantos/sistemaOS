@@ -1,0 +1,35 @@
+.img{
+    height: 100px;
+    width: 100%;
+    background-size: over;
+    background-repeat: no-repeat;
+}
+.imagem-fundo{
+		background-image: url(file:///C:/Users/pedro.silva/Desktop/spring/osVIA1/src/main/resources/static/Imagem%2002.jpg);
+
+}
+img{
+    height: 300px;
+    width: 100%;
+    background-size: over;
+    background-repeat: no-repeat;
+}
+.os{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    width: 50%;
+}
+.geral{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+.envio{
+    border: none;
+}
+.procurar{
+    border-radius: 20px !important;
+}

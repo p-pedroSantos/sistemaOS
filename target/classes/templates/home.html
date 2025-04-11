@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar OS</title>
+    <link rel="stylesheet" href="../estiloenviar.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> 
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div style="background: url(../imagem02.jpeg); height: 150px; width: 100%; background-size: contain; display: flex; justify-content: center; align-items: center; padding: 10px; background-repeat: no-repeat; background-size: cover;">
+                    <div>
+                        <h2 style="color: white; text-align: center;" >Acompanhamento <br> de Acessórios</h2>
+                    </div>
+
+                </div>
+                <div style="margin-top: 10%;">
+                    <form action="/adm/salvar-ordemServico" method="post" enctype="multipart/form-data">
+                        <div class="form-floating mb-3">
+                            
+                            <input type="number" class="form-control" name="codigo" id="floatingInput" placeholder="número do pedido">
+                            <label for="floatingInput" style="color: gray; font-size: 11px;">Digite o numero do pedido</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="number" class="form-control" name="numeroPedido" id="floatingInput" maxlength="10" placeholder="numero da os">
+                            <label for="floatingInput" style="color: gray;font-size: 11px;">Digite o número da OS</label>
+                        </div>
+                        
+                        <div class="form-floating mb-3">
+                            <select class="form-select" aria-label="Default select example" name="loja">
+							  <option  th:each="loj :${enum_lojas}"
+							  th:value="${loj}"
+							  th:text="${loj}">
+							  </option>
+							  
+							</select>
+                            <label for="floatingInput" style="color: gray;font-size: 11px;">Selecione a loja</label>
+                        </div>
+
+                        <div>
+                            <p style="text-align: center; font-size: 13px;"> Envie a foto da OS</p>
+                        </div>
+
+                        <div>
+                            <input class="form-control form-control-sm" name="OrdemServicoArquivo" id="formFileSm" accept=".doc,.docx,.pdf, .mp3, mp4" type="file" style="width: 100%; margin-top: 10px; margin-bottom: 30px;" multiple>
+                        </div>
+
+                        <div style="display: center; justify-content: center; align-items: center;">
+                            <button type="submit" class="btn btn-dark" style="width: 100%; margin-top: 30px;">Enviar</button>
+                            <a type="submit" href="/adm/home" class="btn btn-outline-dark btn2" style="width: 100%; margin-top: 20px;">Voltar</a>
+                        </div>
+                        
+                          
+                          
+                    </form>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+</body>
+</html>
